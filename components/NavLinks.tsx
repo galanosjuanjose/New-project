@@ -23,7 +23,7 @@ export function NavLinks() {
           <Link
             key={link.href}
             href={link.href}
-            className={`text-xs sm:text-sm font-medium px-2 py-1 rounded-full transition ${
+            className={`flex min-h-11 items-center justify-center px-3 text-xs sm:text-sm font-medium rounded-full transition ${
               active ? "text-oro-viejo" : "text-cafe hover:text-chocolate"
             }`}
           >

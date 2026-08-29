@@ -79,7 +79,11 @@ export function LogItemSheet({
       <Card className="w-full max-w-md rounded-b-none bg-cream sm:rounded-2xl">
         <div className="flex items-center justify-between mb-3">
           <h2 className="font-display text-lg text-chocolate">Log an item</h2>
-          <button onClick={onClose} className="text-cafe">
+          <button
+            onClick={onClose}
+            className="flex h-11 w-11 items-center justify-center text-lg text-cafe"
+            aria-label="Close"
+          >
             ✕
           </button>
         </div>
@@ -88,7 +92,7 @@ export function LogItemSheet({
         <select
           value={mealType}
           onChange={(e) => setMealType(e.target.value as LogMealType)}
-          className="mb-3 w-full rounded-lg border border-camel bg-cream px-3 py-2 text-sm capitalize"
+          className="mb-3 w-full rounded-lg border border-camel bg-cream px-3 py-3 text-sm capitalize"
         >
           {MEAL_TYPES.map((m) => (
             <option key={m} value={m}>
@@ -107,14 +111,14 @@ export function LogItemSheet({
                 setSearch(e.target.value);
                 setSelectedFood(null);
               }}
-              className="mb-2 w-full rounded-lg border border-camel bg-cream px-3 py-2 text-sm"
+              className="mb-2 w-full rounded-lg border border-camel bg-cream px-3 py-3 text-sm"
             />
             <div className="mb-3 max-h-40 overflow-y-auto rounded-lg border border-camel/50">
               {filteredFoods.map((food) => (
                 <button
                   key={food.id}
                   onClick={() => setSelectedFood(food)}
-                  className={`flex w-full items-center justify-between px-3 py-2 text-left text-sm hover:bg-arena ${
+                  className={`flex w-full items-center justify-between px-3 py-3 text-left text-sm hover:bg-arena ${
                     selectedFood?.id === food.id ? "bg-arena" : ""
                   }`}
                 >
@@ -138,7 +142,7 @@ export function LogItemSheet({
                   step={0.25}
                   value={quantity}
                   onChange={(e) => setQuantity(Number(e.target.value) || 1)}
-                  className="w-20 rounded-lg border border-camel bg-cream px-2 py-1"
+                  className="w-20 rounded-lg border border-camel bg-cream px-2 py-3"
                 />
                 <span className="text-cafe">
                   = {(selectedFood.calories * quantity).toFixed(0)} cal /{" "}
@@ -147,7 +151,10 @@ export function LogItemSheet({
               </div>
             )}
 
-            <button onClick={() => setCustomMode(true)} className="mb-3 text-xs text-oro-viejo underline">
+            <button
+              onClick={() => setCustomMode(true)}
+              className="mb-3 flex min-h-11 items-center text-xs text-oro-viejo underline"
+            >
               Or add a custom item
             </button>
           </>
@@ -160,7 +167,7 @@ export function LogItemSheet({
               placeholder="Name"
               value={customName}
               onChange={(e) => setCustomName(e.target.value)}
-              className="rounded-lg border border-camel bg-cream px-3 py-2 text-sm"
+              className="rounded-lg border border-camel bg-cream px-3 py-3 text-sm"
             />
             <div className="flex gap-2">
               <input
@@ -168,17 +175,20 @@ export function LogItemSheet({
                 placeholder="Calories"
                 value={customCalories}
                 onChange={(e) => setCustomCalories(e.target.value)}
-                className="w-full rounded-lg border border-camel bg-cream px-3 py-2 text-sm"
+                className="w-full rounded-lg border border-camel bg-cream px-3 py-3 text-sm"
               />
               <input
                 type="number"
                 placeholder="Net carbs (g)"
                 value={customNetCarbs}
                 onChange={(e) => setCustomNetCarbs(e.target.value)}
-                className="w-full rounded-lg border border-camel bg-cream px-3 py-2 text-sm"
+                className="w-full rounded-lg border border-camel bg-cream px-3 py-3 text-sm"
               />
             </div>
-            <button onClick={() => setCustomMode(false)} className="self-start text-xs text-oro-viejo underline">
+            <button
+              onClick={() => setCustomMode(false)}
+              className="flex min-h-11 items-center self-start text-xs text-oro-viejo underline"
+            >
               Back to search
             </button>
           </div>

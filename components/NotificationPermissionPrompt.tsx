@@ -18,7 +18,7 @@ export function NotificationPermissionPrompt() {
   return (
     <button
       onClick={async () => setPermission(await requestNotificationPermission())}
-      className="rounded-full bg-arena px-3 py-1 text-xs text-cafe hover:bg-camel/40"
+      className="inline-flex min-h-11 items-center justify-center rounded-full bg-arena px-4 text-xs text-cafe hover:bg-camel/40"
     >
       Enable snack reminders
     </button>

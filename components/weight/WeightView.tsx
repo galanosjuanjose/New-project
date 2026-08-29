@@ -71,7 +71,7 @@ export function WeightView({
             placeholder="Today's weight (lb)"
             value={weightInput}
             onChange={(e) => setWeightInput(e.target.value)}
-            className="w-full rounded-lg border border-camel bg-cream px-3 py-2 text-sm"
+            className="w-full rounded-lg border border-camel bg-cream px-3 py-3 text-sm"
           />
           <Button onClick={handleLogToday} disabled={saving}>
             {saving ? "Saving..." : "Log today"}

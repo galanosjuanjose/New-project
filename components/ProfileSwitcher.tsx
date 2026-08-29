@@ -28,7 +28,7 @@ export function ProfileSwitcher({ household, selfId }: { household: ProfileRow[]
         <button
           key={p.id}
           onClick={() => selectProfile(p.id)}
-          className={`rounded-full px-3 py-1 text-sm transition ${
+          className={`inline-flex min-h-11 items-center justify-center rounded-full px-4 text-sm transition ${
             p.id === activeId ? "bg-oro-viejo text-cream" : "text-cafe hover:bg-camel/30"
           }`}
         >

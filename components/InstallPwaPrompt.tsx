@@ -43,12 +43,15 @@ export function InstallPwaPrompt() {
               await deferredPrompt.prompt();
               setDeferredPrompt(null);
             }}
-            className="rounded-full bg-oro-viejo px-3 py-1 text-xs text-cream"
+            className="inline-flex min-h-11 items-center justify-center rounded-full bg-oro-viejo px-4 text-xs text-cream"
           >
             Install
           </button>
         )}
-        <button onClick={() => setDismissed(true)} className="text-xs text-cafe">
+        <button
+          onClick={() => setDismissed(true)}
+          className="inline-flex min-h-11 items-center justify-center px-2 text-xs text-cafe"
+        >
           Dismiss
         </button>
       </div>

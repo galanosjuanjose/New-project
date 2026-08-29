@@ -54,7 +54,7 @@ export function ProfileForm({ profile }: { profile: ProfileRow }) {
           setDisplayName(e.target.value);
           setSaved(false);
         }}
-        className="rounded-lg border border-camel bg-cream px-3 py-2 text-sm"
+        className="rounded-lg border border-camel bg-cream px-3 py-3 text-sm"
       />
 
       <div className="grid grid-cols-2 gap-2">
@@ -67,7 +67,7 @@ export function ProfileForm({ profile }: { profile: ProfileRow }) {
               setHeightIn(e.target.value);
               setSaved(false);
             }}
-            className="rounded-lg border border-camel bg-cream px-3 py-2 text-sm text-chocolate"
+            className="rounded-lg border border-camel bg-cream px-3 py-3 text-sm text-chocolate"
           />
         </label>
         <label className="flex flex-col gap-1 text-xs text-cafe">
@@ -79,7 +79,7 @@ export function ProfileForm({ profile }: { profile: ProfileRow }) {
               setWeightLb(e.target.value);
               setSaved(false);
             }}
-            className="rounded-lg border border-camel bg-cream px-3 py-2 text-sm text-chocolate"
+            className="rounded-lg border border-camel bg-cream px-3 py-3 text-sm text-chocolate"
           />
         </label>
       </div>
@@ -92,7 +92,7 @@ export function ProfileForm({ profile }: { profile: ProfileRow }) {
             setActivityLevel(e.target.value as ActivityLevel);
             setSaved(false);
           }}
-          className="rounded-lg border border-camel bg-cream px-3 py-2 text-sm text-chocolate capitalize"
+          className="rounded-lg border border-camel bg-cream px-3 py-3 text-sm text-chocolate capitalize"
         >
           {ACTIVITY_LEVELS.map((level) => (
             <option key={level} value={level}>
@@ -111,7 +111,7 @@ export function ProfileForm({ profile }: { profile: ProfileRow }) {
             setTdeeKcal(e.target.value);
             setSaved(false);
           }}
-          className="rounded-lg border border-camel bg-cream px-3 py-2 text-sm text-chocolate"
+          className="rounded-lg border border-camel bg-cream px-3 py-3 text-sm text-chocolate"
         />
       </label>
 
@@ -124,7 +124,7 @@ export function ProfileForm({ profile }: { profile: ProfileRow }) {
             setCalorieTarget(e.target.value);
             setSaved(false);
           }}
-          className="rounded-lg border border-camel bg-cream px-3 py-2 text-sm text-chocolate"
+          className="rounded-lg border border-camel bg-cream px-3 py-3 text-sm text-chocolate"
         />
       </label>
 
@@ -138,7 +138,7 @@ export function ProfileForm({ profile }: { profile: ProfileRow }) {
               setNetCarbLow(e.target.value);
               setSaved(false);
             }}
-            className="rounded-lg border border-camel bg-cream px-3 py-2 text-sm text-chocolate"
+            className="rounded-lg border border-camel bg-cream px-3 py-3 text-sm text-chocolate"
           />
         </label>
         <label className="flex flex-col gap-1 text-xs text-cafe">
@@ -150,7 +150,7 @@ export function ProfileForm({ profile }: { profile: ProfileRow }) {
               setNetCarbHigh(e.target.value);
               setSaved(false);
             }}
-            className="rounded-lg border border-camel bg-cream px-3 py-2 text-sm text-chocolate"
+            className="rounded-lg border border-camel bg-cream px-3 py-3 text-sm text-chocolate"
           />
         </label>
       </div>
