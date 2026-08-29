@@ -99,7 +99,7 @@ export function MenuView({
   return (
     <div className="flex flex-col gap-4">
       {!isSelf && (
-        <Card className="bg-camel/30 text-sm">Viewing {viewingProfile.display_name}&apos;s menu.</Card>
+        <Card className="bg-salvia/30 text-sm">Viewing {viewingProfile.display_name}&apos;s menu.</Card>
       )}
 
       {isSelf && (

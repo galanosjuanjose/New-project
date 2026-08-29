@@ -69,7 +69,7 @@ export function FoodsBrowser({
           placeholder="Search foods..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="w-full rounded-lg border border-camel bg-cream px-3 py-3 text-sm"
+          className="w-full rounded-lg border border-salvia bg-cream px-3 py-3 text-sm"
         />
         <Button variant="secondary" onClick={() => setFormOpen((v) => !v)}>
           + Add
@@ -83,12 +83,12 @@ export function FoodsBrowser({
             placeholder="Name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="rounded-lg border border-camel bg-cream px-3 py-3 text-sm"
+            className="rounded-lg border border-salvia bg-cream px-3 py-3 text-sm"
           />
           <select
             value={category}
             onChange={(e) => setCategory(e.target.value as FoodCategory)}
-            className="rounded-lg border border-camel bg-cream px-3 py-3 text-sm capitalize"
+            className="rounded-lg border border-salvia bg-cream px-3 py-3 text-sm capitalize"
           >
             {(["ingredient", "snack", "breakfast", "lunch", "dinner", "dessert", "beverage"] as FoodCategory[]).map(
               (c) => (
@@ -104,21 +104,21 @@ export function FoodsBrowser({
               placeholder="Calories"
               value={calories}
               onChange={(e) => setCalories(e.target.value)}
-              className="rounded-lg border border-camel bg-cream px-3 py-3 text-sm"
+              className="rounded-lg border border-salvia bg-cream px-3 py-3 text-sm"
             />
             <input
               type="number"
               placeholder="Total carbs"
               value={totalCarbs}
               onChange={(e) => setTotalCarbs(e.target.value)}
-              className="rounded-lg border border-camel bg-cream px-3 py-3 text-sm"
+              className="rounded-lg border border-salvia bg-cream px-3 py-3 text-sm"
             />
             <input
               type="number"
               placeholder="Fiber"
               value={fiber}
               onChange={(e) => setFiber(e.target.value)}
-              className="rounded-lg border border-camel bg-cream px-3 py-3 text-sm"
+              className="rounded-lg border border-salvia bg-cream px-3 py-3 text-sm"
             />
           </div>
           <Button onClick={handleAdd} disabled={!name.trim() || saving}>

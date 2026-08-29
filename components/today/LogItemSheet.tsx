@@ -92,7 +92,7 @@ export function LogItemSheet({
         <select
           value={mealType}
           onChange={(e) => setMealType(e.target.value as LogMealType)}
-          className="mb-3 w-full rounded-lg border border-camel bg-cream px-3 py-3 text-sm capitalize"
+          className="mb-3 w-full rounded-lg border border-salvia bg-cream px-3 py-3 text-sm capitalize"
         >
           {MEAL_TYPES.map((m) => (
             <option key={m} value={m}>
@@ -111,9 +111,9 @@ export function LogItemSheet({
                 setSearch(e.target.value);
                 setSelectedFood(null);
               }}
-              className="mb-2 w-full rounded-lg border border-camel bg-cream px-3 py-3 text-sm"
+              className="mb-2 w-full rounded-lg border border-salvia bg-cream px-3 py-3 text-sm"
             />
-            <div className="mb-3 max-h-40 overflow-y-auto rounded-lg border border-camel/50">
+            <div className="mb-3 max-h-40 overflow-y-auto rounded-lg border border-salvia/50">
               {filteredFoods.map((food) => (
                 <button
                   key={food.id}
@@ -142,7 +142,7 @@ export function LogItemSheet({
                   step={0.25}
                   value={quantity}
                   onChange={(e) => setQuantity(Number(e.target.value) || 1)}
-                  className="w-20 rounded-lg border border-camel bg-cream px-2 py-3"
+                  className="w-20 rounded-lg border border-salvia bg-cream px-2 py-3"
                 />
                 <span className="text-cafe">
                   = {(selectedFood.calories * quantity).toFixed(0)} cal /{" "}
@@ -153,7 +153,7 @@ export function LogItemSheet({
 
             <button
               onClick={() => setCustomMode(true)}
-              className="mb-3 flex min-h-11 items-center text-xs text-oro-viejo underline"
+              className="mb-3 flex min-h-11 items-center text-xs text-oliva underline"
             >
               Or add a custom item
             </button>
@@ -167,7 +167,7 @@ export function LogItemSheet({
               placeholder="Name"
               value={customName}
               onChange={(e) => setCustomName(e.target.value)}
-              className="rounded-lg border border-camel bg-cream px-3 py-3 text-sm"
+              className="rounded-lg border border-salvia bg-cream px-3 py-3 text-sm"
             />
             <div className="flex gap-2">
               <input
@@ -175,19 +175,19 @@ export function LogItemSheet({
                 placeholder="Calories"
                 value={customCalories}
                 onChange={(e) => setCustomCalories(e.target.value)}
-                className="w-full rounded-lg border border-camel bg-cream px-3 py-3 text-sm"
+                className="w-full rounded-lg border border-salvia bg-cream px-3 py-3 text-sm"
               />
               <input
                 type="number"
                 placeholder="Net carbs (g)"
                 value={customNetCarbs}
                 onChange={(e) => setCustomNetCarbs(e.target.value)}
-                className="w-full rounded-lg border border-camel bg-cream px-3 py-3 text-sm"
+                className="w-full rounded-lg border border-salvia bg-cream px-3 py-3 text-sm"
               />
             </div>
             <button
               onClick={() => setCustomMode(false)}
-              className="flex min-h-11 items-center self-start text-xs text-oro-viejo underline"
+              className="flex min-h-11 items-center self-start text-xs text-oliva underline"
             >
               Back to search
             </button>

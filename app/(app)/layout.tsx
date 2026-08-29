@@ -12,7 +12,7 @@ export default async function AppLayout({ children }: { children: React.ReactNod
   return (
     <div className="flex min-h-full flex-1 flex-col">
       <RegisterServiceWorker />
-      <header className="flex flex-col gap-3 border-b border-camel/40 px-4 py-3 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+      <header className="flex flex-col gap-3 border-b border-salvia/40 px-4 py-3 sm:flex-row sm:items-center sm:justify-between sm:px-6">
         <div className="flex items-center justify-between">
           <h1 className="font-display text-lg text-chocolate">Keto Kitchen</h1>
           <div className="sm:hidden">

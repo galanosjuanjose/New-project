@@ -61,7 +61,7 @@ export function WeightView({
   return (
     <div className="flex flex-col gap-4">
       {!isSelf && (
-        <Card className="bg-camel/30 text-sm">Viewing {viewingProfile.display_name}&apos;s weight (read-only).</Card>
+        <Card className="bg-salvia/30 text-sm">Viewing {viewingProfile.display_name}&apos;s weight (read-only).</Card>
       )}
 
       {isSelf && (
@@ -71,7 +71,7 @@ export function WeightView({
             placeholder="Today's weight (lb)"
             value={weightInput}
             onChange={(e) => setWeightInput(e.target.value)}
-            className="w-full rounded-lg border border-camel bg-cream px-3 py-3 text-sm"
+            className="w-full rounded-lg border border-salvia bg-cream px-3 py-3 text-sm"
           />
           <Button onClick={handleLogToday} disabled={saving}>
             {saving ? "Saving..." : "Log today"}

@@ -42,7 +42,7 @@ export default function LoginPage() {
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="rounded-lg border border-camel bg-cream px-3 py-3 text-sm text-chocolate outline-none focus:border-oro-viejo"
+            className="rounded-lg border border-salvia bg-cream px-3 py-3 text-sm text-chocolate outline-none focus:border-oliva"
           />
           <input
             type="password"
@@ -50,7 +50,7 @@ export default function LoginPage() {
             placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="rounded-lg border border-camel bg-cream px-3 py-3 text-sm text-chocolate outline-none focus:border-oro-viejo"
+            className="rounded-lg border border-salvia bg-cream px-3 py-3 text-sm text-chocolate outline-none focus:border-oliva"
           />
           {error && <p className="text-sm text-terracota">{error}</p>}
           <Button type="submit" disabled={loading} className="mt-2 w-full">

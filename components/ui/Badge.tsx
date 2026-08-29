@@ -3,8 +3,8 @@ import type { ReactNode } from "react";
 type Tone = "great" | "ok" | "over" | "neutral";
 
 const TONE_CLASSES: Record<Tone, string> = {
-  great: "bg-salvia/30 text-cafe",
-  ok: "bg-camel/30 text-cafe",
+  great: "bg-salvia/40 text-chocolate",
+  ok: "bg-oliva/15 text-cafe",
   over: "bg-terracota/20 text-terracota",
   neutral: "bg-arena text-cafe",
 };

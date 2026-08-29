@@ -82,14 +82,14 @@ export function CheckerForm({
             placeholder="Ingredient / product name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="w-full rounded-lg border border-camel bg-cream px-3 py-3 text-sm"
+            className="w-full rounded-lg border border-salvia bg-cream px-3 py-3 text-sm"
           />
           <input
             type="text"
             placeholder="Brand (optional)"
             value={brand}
             onChange={(e) => setBrand(e.target.value)}
-            className="w-full rounded-lg border border-camel bg-cream px-3 py-3 text-sm"
+            className="w-full rounded-lg border border-salvia bg-cream px-3 py-3 text-sm"
           />
         </div>
 
@@ -97,7 +97,7 @@ export function CheckerForm({
           <select
             value={category}
             onChange={(e) => setCategory(e.target.value as FoodCategory)}
-            className="w-full rounded-lg border border-camel bg-cream px-3 py-3 text-sm capitalize"
+            className="w-full rounded-lg border border-salvia bg-cream px-3 py-3 text-sm capitalize"
           >
             {CATEGORY_OPTIONS.map((c) => (
               <option key={c} value={c}>
@@ -110,7 +110,7 @@ export function CheckerForm({
             placeholder="Serving size, e.g. 1 tortilla"
             value={servingLabel}
             onChange={(e) => setServingLabel(e.target.value)}
-            className="w-full rounded-lg border border-camel bg-cream px-3 py-3 text-sm"
+            className="w-full rounded-lg border border-salvia bg-cream px-3 py-3 text-sm"
           />
         </div>
 
@@ -121,7 +121,7 @@ export function CheckerForm({
             placeholder="Calories"
             value={calories}
             onChange={(e) => setCalories(e.target.value)}
-            className="rounded-lg border border-camel bg-cream px-3 py-3 text-sm"
+            className="rounded-lg border border-salvia bg-cream px-3 py-3 text-sm"
           />
           <input
             type="number"
@@ -131,7 +131,7 @@ export function CheckerForm({
               setTotalCarbs(e.target.value);
               setSaved(false);
             }}
-            className="rounded-lg border border-camel bg-cream px-3 py-3 text-sm"
+            className="rounded-lg border border-salvia bg-cream px-3 py-3 text-sm"
           />
           <input
             type="number"
@@ -141,7 +141,7 @@ export function CheckerForm({
               setFiber(e.target.value);
               setSaved(false);
             }}
-            className="rounded-lg border border-camel bg-cream px-3 py-3 text-sm"
+            className="rounded-lg border border-salvia bg-cream px-3 py-3 text-sm"
           />
           <input
             type="number"
@@ -151,7 +151,7 @@ export function CheckerForm({
               setSugarAlcohols(e.target.value);
               setSaved(false);
             }}
-            className="rounded-lg border border-camel bg-cream px-3 py-3 text-sm"
+            className="rounded-lg border border-salvia bg-cream px-3 py-3 text-sm"
           />
         </div>
 
@@ -163,7 +163,7 @@ export function CheckerForm({
                 key={tag}
                 onClick={() => toggleTag(tag)}
                 className={`inline-flex min-h-11 items-center justify-center rounded-full px-4 text-xs capitalize ${
-                  tags.includes(tag) ? "bg-oro-viejo text-cream" : "bg-arena text-cafe"
+                  tags.includes(tag) ? "bg-oliva text-cream" : "bg-arena text-cafe"
                 }`}
               >
                 {tag.replace("_", " ")}

@@ -16,7 +16,7 @@ export function NavLinks() {
   const pathname = usePathname();
 
   return (
-    <nav className="flex justify-around border-t border-camel/40 bg-cream py-2 sm:justify-start sm:gap-6 sm:border-t-0 sm:border-b sm:px-6">
+    <nav className="flex justify-around border-t border-salvia/40 bg-cream py-2 sm:justify-start sm:gap-6 sm:border-t-0 sm:border-b sm:px-6">
       {LINKS.map((link) => {
         const active = pathname.startsWith(link.href);
         return (
@@ -24,7 +24,7 @@ export function NavLinks() {
             key={link.href}
             href={link.href}
             className={`flex min-h-11 items-center justify-center px-3 text-xs sm:text-sm font-medium rounded-full transition ${
-              active ? "text-oro-viejo" : "text-cafe hover:text-chocolate"
+              active ? "text-oliva" : "text-cafe hover:text-chocolate"
             }`}
           >
             {link.label}

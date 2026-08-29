@@ -30,7 +30,7 @@ export function InstallPwaPrompt() {
   if (dismissed || (!deferredPrompt && !isIos)) return null;
 
   return (
-    <div className="fixed inset-x-4 bottom-4 z-50 flex items-center justify-between gap-3 rounded-2xl bg-camel px-4 py-3 text-sm text-chocolate shadow-lg sm:inset-x-auto sm:right-6 sm:max-w-sm">
+    <div className="fixed inset-x-4 bottom-4 z-50 flex items-center justify-between gap-3 rounded-2xl bg-salvia px-4 py-3 text-sm text-chocolate shadow-lg sm:inset-x-auto sm:right-6 sm:max-w-sm">
       <span>
         {isIos
           ? "Install Keto Kitchen: tap Share, then \"Add to Home Screen\"."
@@ -43,7 +43,7 @@ export function InstallPwaPrompt() {
               await deferredPrompt.prompt();
               setDeferredPrompt(null);
             }}
-            className="inline-flex min-h-11 items-center justify-center rounded-full bg-oro-viejo px-4 text-xs text-cream"
+            className="inline-flex min-h-11 items-center justify-center rounded-full bg-oliva px-4 text-xs text-cream"
           >
             Install
           </button>

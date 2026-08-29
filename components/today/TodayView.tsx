@@ -126,14 +126,14 @@ export function TodayView({
   return (
     <div className="mx-auto flex max-w-lg flex-col gap-5">
       {!isSelf && (
-        <Card className="bg-camel/30 text-sm">Viewing {viewingProfile.display_name}&apos;s day (read-only).</Card>
+        <Card className="bg-salvia/30 text-sm">Viewing {viewingProfile.display_name}&apos;s day (read-only).</Card>
       )}
 
       <Card className="flex justify-center gap-8">
         <ProgressRing
           value={totals.caloriesConsumed}
           max={targets.calorieTarget}
-          color="var(--color-oro-viejo)"
+          color="var(--color-oliva)"
           label={`${Math.round(totals.caloriesConsumed)}`}
           sublabel={`of ${targets.calorieTarget} cal`}
         />
@@ -158,7 +158,7 @@ export function TodayView({
       )}
 
       {isSelf && repeated && alternatives.length > 0 && (
-        <Card className="flex flex-col gap-1 bg-camel/20 text-sm">
+        <Card className="flex flex-col gap-1 bg-salvia/20 text-sm">
           <p className="text-cafe">
             You&apos;ve had {repeatedFood?.name ?? "that snack"} {repeated.count}x this week — try something
             different:

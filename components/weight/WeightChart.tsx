@@ -17,10 +17,10 @@ export function WeightChart({ data }: { data: WeightChartPoint[] }) {
           <XAxis dataKey="date" tick={{ fontSize: 10, fill: "var(--color-cafe)" }} />
           <YAxis domain={["auto", "auto"]} tick={{ fontSize: 10, fill: "var(--color-cafe)" }} />
           <Tooltip
-            contentStyle={{ backgroundColor: "var(--color-cream)", border: "1px solid var(--color-camel)" }}
+            contentStyle={{ backgroundColor: "var(--color-cream)", border: "1px solid var(--color-salvia)" }}
           />
-          <Line type="monotone" dataKey="weightLb" stroke="var(--color-camel)" dot={{ r: 2 }} name="Weight" />
-          <Line type="monotone" dataKey="avg" stroke="var(--color-oro-viejo)" dot={false} name="7-day avg" />
+          <Line type="monotone" dataKey="weightLb" stroke="var(--color-salvia)" dot={{ r: 2 }} name="Weight" />
+          <Line type="monotone" dataKey="avg" stroke="var(--color-oliva)" dot={false} name="7-day avg" />
         </LineChart>
       </ResponsiveContainer>
     </div>
