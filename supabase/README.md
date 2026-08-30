@@ -14,3 +14,8 @@
 6. Also enable Realtime for `food_logs` and `weight_logs` if it isn't already
    (Database -> Replication) — the init migration adds them to the
    `supabase_realtime` publication, but double-check on the dashboard.
+7. For the ingredient-based plate builder (Menu -> Build lunch/dinner), also
+   run `migrations/0002_plate_builder.sql` then `seed_plate_builder.sql` in
+   the SQL editor. This adds the vegetable/protein/seasoning ingredient
+   database and the tables the builder needs (`plate_ingredients`,
+   `seasonings`, `ingredient_pool_selections`).

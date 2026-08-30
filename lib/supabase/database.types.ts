@@ -16,6 +16,8 @@ export type FoodCategory =
 export type MealTemplateType = "breakfast" | "lunch" | "dinner" | "snack" | "dessert";
 export type AppliesTo = "both" | "juan_only" | "mariana_only";
 export type LogMealType = "breakfast" | "lunch" | "dinner" | "snack" | "dessert" | "beverage";
+export type FoodGroup = "protein" | "vegetable" | "seasoning" | "dairy" | "fat" | "other";
+export type CreatedVia = "authored" | "generated";
 
 export type ProfileRow = {
   id: string;
@@ -50,6 +52,7 @@ export type FoodRow = {
   is_keto_friendly: boolean;
   tags: string[];
   is_new_discovery: boolean;
+  food_group: FoodGroup;
   created_by: string | null;
   created_at: string;
 };
@@ -64,7 +67,33 @@ export type MealTemplateRow = {
   base_net_carbs_g: number;
   portion_note: string | null;
   tags: string[];
+  created_via: CreatedVia;
+  is_favorite: boolean;
   created_at: string;
+};
+
+export type PlateIngredientRow = {
+  id: string;
+  meal_template_id: string;
+  food_id: string;
+  quantity: number;
+  unit: string;
+  created_at: string;
+};
+
+export type SeasoningRow = {
+  id: string;
+  household_id: string;
+  food_id: string;
+  is_active: boolean;
+  created_at: string;
+};
+
+export type IngredientPoolSelectionRow = {
+  household_id: string;
+  protein_food_ids: string[];
+  vegetable_food_ids: string[];
+  updated_at: string;
 };
 
 export type FoodLogRow = {
@@ -129,6 +158,9 @@ export interface Database {
       weight_logs: Table<WeightLogRow, Partial<WeightLogRow>>;
       snack_suggestions: Table<SnackSuggestionRow, Partial<SnackSuggestionRow>>;
       weekly_menu_items: Table<WeeklyMenuItemRow, Partial<WeeklyMenuItemRow>>;
+      plate_ingredients: Table<PlateIngredientRow, Partial<PlateIngredientRow>>;
+      seasonings: Table<SeasoningRow, Partial<SeasoningRow>>;
+      ingredient_pool_selections: Table<IngredientPoolSelectionRow, Partial<IngredientPoolSelectionRow>>;
     };
     Views: Record<string, never>;
     Functions: Record<string, never>;

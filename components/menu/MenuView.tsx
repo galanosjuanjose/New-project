@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Link from "next/link";
 import { createClient } from "@/lib/supabase/client";
 import { generateWeeklyMenu, type ProfileKey } from "@/lib/calculations/menuRotation";
 import { Card } from "@/components/ui/Card";
@@ -103,9 +104,23 @@ export function MenuView({
       )}
 
       {isSelf && (
-        <Button onClick={handleGenerate} disabled={generating} className="self-start">
-          {generating ? "Generating..." : items.length > 0 ? "Regenerate week" : "Generate this week"}
-        </Button>
+        <div className="flex flex-wrap gap-2">
+          <Button onClick={handleGenerate} disabled={generating}>
+            {generating ? "Generating..." : items.length > 0 ? "Regenerate week" : "Generate this week"}
+          </Button>
+          <Link
+            href="/menu/build"
+            className="flex min-h-11 items-center justify-center rounded-full border border-salvia bg-cream px-5 text-sm font-medium text-chocolate transition hover:bg-arena"
+          >
+            Build lunch/dinner
+          </Link>
+          <Link
+            href="/menu/favorites"
+            className="flex min-h-11 items-center justify-center rounded-full border border-salvia bg-cream px-5 text-sm font-medium text-chocolate transition hover:bg-arena"
+          >
+            Favorites
+          </Link>
+        </div>
       )}
 
       {days.map((day) => {
